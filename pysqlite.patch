@@ -1,0 +1,14 @@
+--- tagsplugin/tags/0.6/tractags/model.py~	2008-01-16 06:47:04.000000000 +0100
++++ tagsplugin/tags/0.6/tractags/model.py	2008-09-13 22:23:00.757555548 +0200
+@@ -20,10 +20,10 @@ class TagModelProvider(Component):
+         self._upgrade_db(self.env.get_db_cnx())
+ 
+     def environment_needs_upgrade(self, db):
+-        cursor = db.cursor()
+         if self._need_migration(db):
+             return True
+         try:
++            cursor = db.cursor()
+             cursor.execute("select count(*) from tags")
+             cursor.fetchone()
+             return False
