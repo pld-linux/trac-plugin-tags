@@ -14,6 +14,7 @@ URL:		http://trac-hacks.org/wiki/TagsPlugin
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
+BuildRequires:	unzip
 Requires:	trac >= %{trac_ver}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
