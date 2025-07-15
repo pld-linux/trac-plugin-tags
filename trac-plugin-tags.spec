@@ -28,7 +28,7 @@ system.
 
 %prep
 %setup -q -n %{plugin}plugin
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cd %{plugin}/%{version}
